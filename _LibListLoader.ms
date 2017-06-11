@@ -9,7 +9,7 @@
 ---------------------------------------------------
 
 */
-LibPath = @"D:\FXTDT\DevFxTDT\MXS\Libs\" -- change this path lo your Liberary directory
+LibPath = @"D:\FXTDT\DevFxTDT\MXS\Libs\" -- change this path to your Liberary directory
 
 fn LibList = 
 	(
