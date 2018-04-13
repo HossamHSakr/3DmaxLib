@@ -2,12 +2,12 @@
 ++-----------------++ Hosssam Hassan Sakr   ++-----------------++
 ++-----------------++ (+202) 0100 7765 835  ++-----------------++
 ++-----------------++ sniper.hh@gmail.com   ++-----------------++
-++-----------------++ Show Hidden layers    ++-----------------++
+++-----------------++ Layer_Explorer_3ds_Max_Issue_V01    ++-----------------++
 ++-----------------++ Created 13-april-2018 ++-----------------++
 ++-----------------++ finish 13-april-2018  ++-----------------++
 
 try (DestroyDialog LayerErr )catch()
-rollout LayerErr "Show Hidden layers" width:162 height:185
+rollout LayerErr "Layer Explorer IssueV01" width:162 height:185
 (
 	groupBox 'grp1' "Show layer by:" pos:[6,4] width:147 height:93 align:#left
 	label 'info' "Info...Hotfix for unavaliable layers in scene explorer.		Hossam Hassan Sakr		(+202) 0100 7765 835		sniper.hh@gmail.com" pos:[9,104] width:144 height:70 align:#left
