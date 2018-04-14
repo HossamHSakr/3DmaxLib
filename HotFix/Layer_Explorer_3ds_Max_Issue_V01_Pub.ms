@@ -5,7 +5,7 @@
 ++-----------------++ Layer_Explorer_3ds_Max_Issue_V01    ++-----------------++
 ++-----------------++ Created 13-april-2018 ++-----------------++
 ++-----------------++ finish 13-april-2018  ++-----------------++
-
+*/
 try (DestroyDialog LayerErr )catch()
 rollout LayerErr "Layer Explorer IssueV01" width:162 height:185
 (
