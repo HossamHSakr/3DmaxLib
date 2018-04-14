@@ -12,7 +12,7 @@ rollout LayerErr "Layer Explorer IssueV01" width:162 height:185
 	groupBox 'grp1' "Show layer by:" pos:[6,4] width:147 height:93 align:#left
 	label 'info' "Info...Hotfix for unavaliable layers in scene explorer.		Hossam Hassan Sakr		(+202) 0100 7765 835		sniper.hh@gmail.com" pos:[9,104] width:144 height:70 align:#left
 	button '_Object' "Selected Object" pos:[19,26] width:113 height:27 toolTip:"select one object" align:#left
-	button '_All' "All Objects" pos:[19,61] width:113 height:27 align:#left
+	button '_All' "All Objects" pos:[19,61] width:113 height:27 align:#left toolTip:"it will take awhile"
 	on _Object pressed  do
 	(
 	LayerName = ($.layer.Name )as string
