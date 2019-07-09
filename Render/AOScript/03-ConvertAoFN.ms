@@ -18,7 +18,7 @@ fn StdMtl =
 		if selectedMaterial.opacityMapEnable != true then  
 		(																----if there is no opacity map
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on  
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+selectedMaterialname  --- Change material Name
 		)
 		else 			----if there is opacity map
@@ -28,7 +28,7 @@ fn StdMtl =
 			--print " has opacityMap " + OStanderdMap.name
 			print " Create AO for this one"
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on opacity_texmap:OStanderdMap 
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+ selectedMaterialname  --- Change material Name
 		)
 	)
@@ -39,7 +39,7 @@ fn VRMtl =
 		if selectedMaterial.texmap_opacity == undefined then  
 		(																----if there is no opacity map
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on  
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+selectedMaterialname  --- Change material Name
 		)
 		else 			----if there is opacity map
@@ -60,7 +60,7 @@ fn VRFastSSS2Mtl =
 		if selectedMaterial.texmap_opacity == undefined then  
 		(																----if there is no opacity map
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on  
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+selectedMaterialname  --- Change material Name
 		)
 		else 			----if there is opacity map
@@ -70,7 +70,7 @@ fn VRFastSSS2Mtl =
 			print " has opacityMap " + OStanderdMap.name
 			print " Create AO for this one"
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on opacity_texmap:OStanderdMap 
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+ selectedMaterialname  --- Change material Name
 			--selectedMaterial.opacity_texmap = OStanderdMap
 		)
@@ -82,7 +82,7 @@ fn VRSkinMtl =
 		if selectedMaterial.texmap_opacity == undefined then  
 		(																----if there is no opacity map
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on  
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+selectedMaterialname  --- Change material Name	
 		)
 		 else			----if there is opacity map
@@ -92,7 +92,7 @@ fn VRSkinMtl =
 			print " has opacityMap " + OStanderdMap.name
 			print " Create AO for this one"
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on opacity_texmap:OStanderdMap 
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+ selectedMaterialname  --- Change material Name
 			selectedMaterial.opacity_texmap = OStanderdMap
 		)
@@ -102,7 +102,7 @@ fn VRSkinMtl =
 	(
 		print "2"
 			selectedMaterial = VRayLightMtl twoSided:on compensate_exposure:on opacity_multiplyColor:on  
-			selectedMaterial.texmap = VRayDirt radius:75 work_with_transparency:on
+			selectedMaterial.texmap = VRayDirt radius:VRayDirtRadius work_with_transparency:on
 			selectedMaterial.name =   "NewMatAO_"+selectedMaterialname  --- Change material Name
 	)
 	
