@@ -32,7 +32,7 @@ SceneObjects= $* as array
 --Try(
 for i=1 to SceneObjects.count do 
 (
-	if superclassof SceneObjects[i] == GeometryClass then
+	if (superclassof SceneObjects[i] == GeometryClass) or (superclassof SceneObjects[i] == shape)  then
 	(
 		if SceneObjects[i].Material != undefined then  --- check if it is geo or not 
 		(
