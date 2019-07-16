@@ -34,7 +34,7 @@ for i=1 to SceneObjects.count do
 (
 	if (superclassof SceneObjects[i] == GeometryClass) or (superclassof SceneObjects[i] == shape)  then
 	(
-		if SceneObjects[i].Material != undefined then  --- check if it is geo or not 
+		if SceneObjects[i].Material != undefined then  --- check if it has material or not 
 		(
 			print "1 " + (SceneObjects[i].Material.name) as string + "     -     "+  selectedMaterialname   
 			append SceneObjects i 
@@ -215,12 +215,12 @@ for i=1 to SceneObjects.count do
 					SceneObjects[i].Material = selectedMaterial
 				)
 				
-				if classof SceneObjects[1].Material == Doublesided do 
+				if classof SceneObjects[i].Material == Doublesided do 
 				(
-					print "5 Doublesided " + SceneObjects[1].name + "     -     "+  selectedMaterialname
-					selectedObj = SceneObjects[1]
-					selectedMaterialMain = SceneObjects[1].Material 
-					selectedMaterialname = SceneObjects[1].Material.name
+					print "5 Doublesided " + SceneObjects[i].name + "     -     "+  selectedMaterialname
+					selectedObj = SceneObjects[i]
+					selectedMaterialMain = SceneObjects[i].Material 
+					selectedMaterialname = SceneObjects[i].Material.name
 					
 					selectedMaterialF = selectedMaterialMain.material1
 					selectedMaterialFname = selectedMaterialF.name
@@ -346,30 +346,30 @@ for i=1 to SceneObjects.count do
 					VRMtl()
 					selectedMaterialMain.baseMtl = selectedMaterial
 					)
-				
-				for i = 1 to 9 do 
-				(
-				if selectedMaterialMain.coatMtl[i] != undefined then  --- check if it is geo or not 
-					(
-						--selectedMaterialMainList = selectedMaterialMain.coatMtl[i]
-						if classof selectedMaterialMain.coatMtl[i] == standardmaterial  then --- Standerd Material
-						(
-						selectedMaterial = selectedMaterialMain.coatMtl[i]
-						StdMtl()
-						selectedMaterialMain.coatMtl[i]= selectedMaterial
-						)
-						if classof selectedMaterialMain.coatMtl[i] == VRayMtl  do --- Standerd Material
-						(
-						selectedMaterial = selectedMaterialMain.coatMtl[i]
-						VRMtl()
-						selectedMaterialMain.coatMtl[i] = selectedMaterial
-						)
-					)
-				else
-					(
-						i+1
-					)				
-				)
+						
+							for i = 1 to 9 do 
+							(
+							if selectedMaterialMain.coatMtl[i] != undefined then  --- check if it has Matt or not 
+								(
+									--selectedMaterialMainList = selectedMaterialMain.coatMtl[i]
+									if classof selectedMaterialMain.coatMtl[i] == standardmaterial  then --- Standerd Material
+									(
+									selectedMaterial = selectedMaterialMain.coatMtl[i]
+									StdMtl()
+									selectedMaterialMain.coatMtl[i]= selectedMaterial
+									)
+									if classof selectedMaterialMain.coatMtl[i] == VRayMtl  do --- Standerd Material
+									(
+									selectedMaterial = selectedMaterialMain.coatMtl[i]
+									VRMtl()
+									selectedMaterialMain.coatMtl[i] = selectedMaterial
+									)
+								)
+							else
+								(
+									i+1
+								)
+							)
 				
 				if classof selectedMaterialMain.baseMtl == standardmaterial  do --- Standerd Material
 					(
@@ -657,7 +657,7 @@ for i=1 to SceneObjects.count do
 							
 						)
 					)
-				)
+				)---
 			)
 		)else(
 
